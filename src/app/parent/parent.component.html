@@ -1,0 +1,9 @@
+<h2>Parent Component</h2>
+<p>
+  Message from Child:
+  <strong *ngIf="!!messageFromChild">{{ messageFromChild }}</strong>
+</p>
+<app-child
+  [messageFromParent]="messageToChild"
+  (messageEvent)="receiveMessage($event)"
+></app-child>
